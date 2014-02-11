@@ -1,16 +1,24 @@
+@pathcolor: #D1681D;
 .highway[zoom >= 16]{
   [highway='footway']{
-    line-color:#fcb4b4;
+    line-color:@pathcolor;
+    line-width: 1;
   }
   [highway='steps']{
-    line-dasharray: 2,2;
-    line-width: 4;
-    line-color:#fcb4b4;
+    [zoom < 18] {
+      line-color:@pathcolor;
+      line-width: 1;
+    }
+    [zoom >= 18] {
+      line-dasharray: 2,2;
+      line-width: 4;
+      line-color:@pathcolor;
+    }
   }
   [highway='cycleway']{
-    line-color: #ad90d8; 
+    line-color: @pathcolor; 
   }
   [highway='path']{
-    line-color: #006caf; 
+    line-color: @pathcolor; 
   }
 }
