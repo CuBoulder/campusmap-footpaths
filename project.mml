@@ -1,0 +1,59 @@
+{
+  "bounds": [
+    -105.3094,
+    39.9585,
+    -105.184,
+    40.0572
+  ],
+  "center": [
+    -105.2668,
+    40.0075,
+    16
+  ],
+  "format": "png",
+  "interactivity": false,
+  "minzoom": 14,
+  "maxzoom": 21,
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+  "Stylesheet": [
+    "footpaths.mss"
+  ],
+  "Layer": [
+    {
+      "geometry": "linestring",
+      "extent": [
+        -110.0435013015726,
+        36.01217294642281,
+        -99.37272755355096,
+        42.432475944879485
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(SELECT highway, route, way\nFROM planet_osm_line\nWHERE highway is not null) AS highways",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-12249986.53,4302296.48,-11062121.43,5225984.01",
+        "dbname": "osm_cuboulder",
+        "host": "localhost",
+        "port": "5432",
+        "user": "osm_read",
+        "password": "ZrJ3M4qeQN",
+        "id": "highway",
+        "project": "cu-footpaths",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "highway",
+      "class": "highway",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "highway"
+    }
+  ],
+  "scale": 1,
+  "metatile": 2,
+  "name": "CU Footpaths",
+  "description": "Footpaths on the CU Campus",
+  "attribution": ""
+}
